@@ -76,6 +76,7 @@ class StationDetailViewController: UIViewController {
                 guard case .success(let data) = response.result else { return }
                 
                 self?.realTimeArrivalList = data.realtimeArrivalList
+                
                 self?.collectionView.reloadData()
             }
             .resume()
